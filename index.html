@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento Bicudo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gerenciamento Bicudo</h1>
+    <div class="input-group">
+        <label for="responsavel">Nome do Responsável:</label>
+        <input type="text" id="responsavel">
+    </div>
+    <div class="input-group">
+        <label for="sala">Nome da Sala:</label>
+        <input type="text" id="sala">
+    </div>
+    <div class="input-group">
+        <label for="alunos">Nome dos Alunos (separados por vírgula):</label>
+        <input type="text" id="alunos">
+    </div>
+    <input type="file" id="fileInput" style="display: none;" onchange="loadStudents(event)">
+    <button onclick="document.getElementById('fileInput').click()">Adicionar Alunos por Arquivo</button>
+    <div class="input-group">
+        <label for="peca">Controle Total Utilizados Equipamentos </label>
+        <input type="text" id="peca">
+    </div>
+    <button onclick="addPiece()">Controle Entregue: S/N</button>
+    <div id="pieces-list"></div>
+    <button onclick="finalize()">Finalizar</button>
+
+    <h2>Alunos</h2>
+    <ul id="students-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
